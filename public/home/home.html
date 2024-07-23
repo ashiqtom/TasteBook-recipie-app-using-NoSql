@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Management and Sharing Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="auth-links">
+    <a href="../login/login.html">Login</a>
+    <a href="../register/register.html">Register</a>
+    <a href="../admins/admins.html">admin</a>
+  </div>
+  <div id="app">
+    <nav>
+      <ul>
+        <li><a href="#" id="navRecipes">Recipes</a></li>
+        <li><a href="#" id="navCreateRecipe">Create Recipe</a></li>
+        <li><a href="#" id="navProfile">Profile</a></li>
+        <li><a href="#" id="navFavorites">Favorites</a></li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="recipesSection" class="page">
+        <h2>Recipes</h2>
+          <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search recipes...">
+            <button type="submit">Search</button>
+          </form>    
+        <div id="recipes"></div>
+      </div>
+
+      <div id="createRecipeSection" class="page" style="display:none;">
+        <h2>Create Recipe</h2>
+        <form id="createRecipeForm" enctype="multipart/form-data">
+          <input type="text" id="recipeTitle" placeholder="Title" required>
+          <textarea id="recipeIngredients" placeholder="Ingredients" required></textarea>
+          <textarea id="recipeInstructions" placeholder="Instructions" required></textarea>
+          <input type="number" id="cookingTime" placeholder="Cooking Time (minutes)" required>
+          <input type="number" id="servings" placeholder="Servings" required>
+          <input type="file" id="recipeImage" accept="image/*">
+          <button type="submit">Create Recipe</button>
+        </form>
+      </div>
+
+      <div id="profileSection" class="page" style="display:none;">
+        <h2>Profile</h2>
+        <div id="userDetails"></div>
+        <div id="userRecipes"></div>
+      </div>
+
+      <div id="favoritesSection" class="page" style="display:none;">
+        <h2>Favorites</h2>
+        <div id="favorites"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

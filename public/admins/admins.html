@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Recipe Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <nav>
+      <ul>
+        <li><a href="#" id="navUserManagement">User Management</a></li>
+        <li><a href="#" id="navRecipeManagement">Recipe Management</a></li>
+        <li><a href="#" id="navLogout">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="userManagementSection" class="page">
+        <h2>User Management</h2>
+        <div id="userList"></div>
+      </div>
+
+      <div id="recipeManagementSection" class="page" style="display:none;">
+        <h2>Recipe Management</h2>
+        <div id="recipeList"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="admins.js"></script>
+</body>
+</html>
